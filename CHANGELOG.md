@@ -8,6 +8,12 @@ Changes are grouped by date.
 
 ## [Unreleased]
 
+## [2026-05-14]
+
+### Added
+
+- `js-ts-typing` skill: practical JavaScript and TypeScript type-safety guidance covering precise type modeling, discriminated unions, `unknown` at trust boundaries, checked JavaScript with `// @ts-check`, schema parsing, branded types, const assertions, and strict compiler options
+
 ### Added
 
 - `sf-commit-convention` skill (`skills/system/`): enforce SparkFabrik commit message and branch naming conventions -- adaptive format detection from git log history (conventional, legacy, Jira-style, custom) with most-recent-commit-wins for mixed logs and user prompt for unrecognizable histories, commit-msg hook error parsing for automatic format recovery, mandatory issue references in commit footers only (`Refs:`/`Closes:` trailers with fully qualified project path, never bare `#N` or in the subject line), branch naming (`feat/<issue>-<desc>`, `fix/<issue>-<desc>`, etc.), lowercase `Assisted-by` AI trailer on every commit, and non-interactive git operation guidance (avoid `-i`/`--interactive` flags, editors, and TTY-dependent commands)

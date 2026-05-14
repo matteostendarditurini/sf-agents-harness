@@ -15,18 +15,19 @@ Inspired by [github/awesome-copilot](https://github.com/github/awesome-copilot/t
 
 ## Skills
 
-| Skill                      | Description                                                                                      | Path                                    |
-| -------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------- |
-| **glab**                   | GitLab CLI -- issues, merge requests, CI/CD pipelines, repositories                              | `skills/system/glab/`                   |
-| **gh**                     | GitHub CLI -- issues, pull requests, Actions, releases, PR review comments                       | `skills/system/gh/`                     |
-| **playwright-cli**         | Browser automation -- web testing, screenshots, form filling, data extraction                    | `skills/system/playwright-cli/`         |
-| **skill-creator**          | Create, iterate, and benchmark agent skills with eval-driven workflows                           | `skills/system/skill-creator/`          |
-| **doc-coauthoring**        | Structured workflow for co-authoring docs, proposals, and technical specs                        | `skills/system/doc-coauthoring/`        |
-| **code-security-audit**    | Multi-stack code security audit -- automated scans (Docker-based) + manual deep review           | `skills/system/code-security-audit/`    |
-| **agentic-security-audit** | AI agent security audit -- instruction files, MCP configs, LLM integration, OWASP Agentic Top 10 | `skills/system/agentic-security-audit/` |
-| **githuman**               | Review AI-generated code before committing via GitHuman Docker instances (sjust/ajust)           | `skills/system/githuman/`               |
-| **auto-format-doc**        | Auto-format files after writing/editing them via Just recipes (sjust/ajust) -- Markdown/Prettier | `skills/system/auto-format-doc/`        |
-| **sf-create-agentsmd**     | Discovery-driven AGENTS.md generator and reviewer with supply chain safety and command policy     | `skills/system/sf-create-agentsmd/`     |
+| Skill                      | Description                                                                                             | Path                                    |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **glab**                   | GitLab CLI -- issues, merge requests, CI/CD pipelines, repositories                                     | `skills/system/glab/`                   |
+| **gh**                     | GitHub CLI -- issues, pull requests, Actions, releases, PR review comments                              | `skills/system/gh/`                     |
+| **playwright-cli**         | Browser automation -- web testing, screenshots, form filling, data extraction                           | `skills/system/playwright-cli/`         |
+| **skill-creator**          | Create, iterate, and benchmark agent skills with eval-driven workflows                                  | `skills/system/skill-creator/`          |
+| **doc-coauthoring**        | Structured workflow for co-authoring docs, proposals, and technical specs                               | `skills/system/doc-coauthoring/`        |
+| **code-security-audit**    | Multi-stack code security audit -- automated scans (Docker-based) + manual deep review                  | `skills/system/code-security-audit/`    |
+| **agentic-security-audit** | AI agent security audit -- instruction files, MCP configs, LLM integration, OWASP Agentic Top 10        | `skills/system/agentic-security-audit/` |
+| **githuman**               | Review AI-generated code before committing via GitHuman Docker instances (sjust/ajust)                  | `skills/system/githuman/`               |
+| **js-ts-typing**           | Practical JS/TS type safety -- unions, `// @ts-check`, strictness, `unknown`, schema parsing, brands    | `skills/system/js-ts-typing/`           |
+| **auto-format-doc**        | Auto-format files after writing/editing them via Just recipes (sjust/ajust) -- Markdown/Prettier        | `skills/system/auto-format-doc/`        |
+| **sf-create-agentsmd**     | Discovery-driven AGENTS.md generator and reviewer with supply chain safety and command policy           | `skills/system/sf-create-agentsmd/`     |
 | **sf-commit-convention**   | Enforce SparkFabrik commit conventions -- conventional commits, legacy fallback, issue refs, AI trailer | `skills/system/sf-commit-convention/`   |
 
 Skills are documents that provide context to Copilot on specific topics. Each skill contains:
@@ -40,6 +41,12 @@ Browse the `skills/` directory for available categories.
 ## Agents
 
 Agents are custom Copilot configurations with specific instructions.
+
+### System agents
+
+| Agent             | Description                                                                 | Path                           |
+| ----------------- | --------------------------------------------------------------------------- | ------------------------------ |
+| **the-architect** | Discovery, brainstorming, architecture, and general technical discussion    | `agents/system/the-architect/` |
 
 Browse the `agents/` directory for available agents.
 

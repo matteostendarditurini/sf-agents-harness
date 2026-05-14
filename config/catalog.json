@@ -22,6 +22,9 @@
     "githuman": {
       "description": "Review AI-generated code changes before committing"
     },
+    "js-ts-typing": {
+      "description": "Practical JS/TS type safety, unions, JSDoc, strictness"
+    },
     "glab": {
       "description": "GitLab CLI (issues, MRs, pipelines, repos)"
     },
