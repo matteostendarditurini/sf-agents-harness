@@ -46,7 +46,10 @@ Agents are custom Copilot configurations with specific instructions.
 
 | Agent             | Description                                                                 | Path                           |
 | ----------------- | --------------------------------------------------------------------------- | ------------------------------ |
+| **the-analyst**   | Domain analysis and modeling -- requirements clarity, workflows, invariants | `agents/system/the-analyst/`   |
 | **the-architect** | Discovery, brainstorming, architecture, and general technical discussion    | `agents/system/the-architect/` |
+| **the-builder**   | Test-driven implementation -- code, tests, and refactoring                  | `agents/system/the-builder/`   |
+| **the-reviewer**  | Read-only implementation review and option comparison                       | `agents/system/the-reviewer/`  |
 
 Browse the `agents/` directory for available agents.
 

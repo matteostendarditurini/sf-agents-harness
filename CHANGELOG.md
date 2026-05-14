@@ -13,6 +13,7 @@ Changes are grouped by date.
 ### Added
 
 - `js-ts-typing` skill: practical JavaScript and TypeScript type-safety guidance covering precise type modeling, discriminated unions, `unknown` at trust boundaries, checked JavaScript with `// @ts-check`, schema parsing, branded types, const assertions, and strict compiler options
+- `the-analyst`, `the-builder`, and `the-reviewer` system agents: add domain analysis, test-driven implementation, and read-only review profiles for both Copilot and OpenCode, plus a manual eval matrix for distribution checks
 
 ### Added
 
