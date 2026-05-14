@@ -1,0 +1,83 @@
+{
+  "skill_name": "js-ts-typing",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm modeling an API request in TypeScript with `isLoading`, `data?`, and `error?`, but the state keeps getting contradictory. Can you redesign it so illegal states are impossible and explain the tradeoff?",
+      "expected_output": "The agent should recommend a discriminated union over independent booleans/optional fields, explain the illegal-state problem, and show a concrete TypeScript example with a discriminant such as `kind` or `status`.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "This is still a JavaScript codebase. Show me how to get useful typing without migrating everything to TypeScript, especially for generics and const literals.",
+      "expected_output": "The agent should present `// @ts-check` as the main path, use JSDoc examples with `@typedef`, `@template`, and `@type {const}`, and avoid framing TypeScript migration as a prerequisite.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm confused about `prop?: T` versus `prop: T | undefined` versus `prop: T | null`. Can you give me a mental model and tell me which one to use in app state?",
+      "expected_output": "The agent should explain the semantic difference between absence, explicit undefined, and explicit null; connect the explanation to set-theoretic thinking; and recommend choosing the representation that matches the domain instead of treating them as interchangeable.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I just added a new case to a discriminated union and I want the compiler to tell me every switch I forgot to update. Show me how to do an exhaustiveness check in both TypeScript and JavaScript with `// @ts-check`.",
+      "expected_output": "The agent should explain exhaustiveness checks with a `never`-based default branch, show the `assertNever` pattern for both TypeScript and checked JavaScript, and distinguish it from a plain runtime-only `throw new Error` default branch.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I get JSON from an API and people keep writing `as User` after `response.json()`. I want a safer pattern in both TypeScript and JavaScript with `// @ts-check`. Show me type guards and how to parse from `unknown`.",
+      "expected_output": "The agent should recommend `unknown` at the trust boundary, show a runtime validator or parser rather than a naked cast, include a type-guard pattern for both TypeScript and checked JavaScript, and explain that parsing is what earns the trusted type.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "I want a section on higher-order types in TypeScript, but practical: things like generic type factories and composing nested types such as `Result<Page<User>>`. Also mention what checked JavaScript can and cannot do here.",
+      "expected_output": "The agent should explain generic aliases as type-level functions, show practical nested composition like `Result<Page<User>>`, mention the limits of checked JavaScript/JSDoc for advanced type-level abstractions, and clarify that TypeScript does not have first-class higher-kinded types.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Add guidance on using cardinality to decide types. I want to know when something should be a boolean, a literal union, a tuple, an optional value, a non-empty array, or a plain collection.",
+      "expected_output": "The agent should explain cardinality as a driver for type choice, connect it to state-space explosion from multiple booleans, and show practical examples such as literal unions, tuples, and non-empty arrays in TypeScript and/or checked JavaScript.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Make it explicit that clean code in TypeScript and checked JavaScript depends on how well the types are structured. I want that principle stated clearly, not implied.",
+      "expected_output": "The agent should state plainly that code cleanliness follows type structure quality, and connect well-structured types to simpler control flow, fewer impossible states, and less defensive code.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Give me a concrete example where state explosion from multiple booleans makes the code ugly, and then show the same domain modeled with better types so the code becomes simple.",
+      "expected_output": "The agent should contrast a flag-heavy state model with a discriminated union version of the same domain, and show how the better type model removes contradictory branches and simplifies the implementation.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "I want to improve type safety in a TypeScript project that still uses permissive compiler defaults. Which compiler options matter most, and how should I think about adopting them?",
+      "expected_output": "The agent should explain that compiler strictness is a core part of type safety, recommend options such as `strict`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, and `useUnknownInCatchVariables`, and frame adoption as deliberate tightening rather than papering over errors with casts.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "People keep using `any` and `as unknown as Foo` in reviews. Explain when `unknown` is the right choice, why `any` is dangerous, and show a safer pattern.",
+      "expected_output": "The agent should distinguish `unknown` from `any`, warn against double assertions and broad unsafe casts, and recommend parsing or type guards that turn untrusted input into a trusted domain type.",
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "We already use a schema library like Zod. Show how that fits into a type-safe boundary instead of sprinkling `as User` after `response.json()`.",
+      "expected_output": "The agent should recommend schema parsing at trust boundaries, explain that the trusted type comes from successful parsing rather than casting, and connect the approach to the existing `unknown`-first guidance.",
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "Can branded types help prevent mixing IDs like `UserId` and `OrderId` even though they are both strings? Show a practical example and when this is worth doing.",
+      "expected_output": "The agent should explain branded or opaque types as a way to distinguish domain values that share the same primitive representation, show a practical TypeScript example such as `UserId` vs `OrderId`, and recommend using brands for IDs or validated domain values rather than everywhere.",
+      "files": []
+    }
+  ]
+}
